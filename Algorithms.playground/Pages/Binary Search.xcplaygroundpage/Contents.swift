@@ -2,19 +2,21 @@
  
  # Binary Search
  - - - - - - - - - -
- Average performance: O(log n)
+ Goal: Quickly find an element in an array.
+ 
+ Performance: O(log n)
 */
 
 import Foundation
 
-func binarySearch<T: Comparable>(_ list: [T], item: T) -> Int? {
+func binarySearch<T: Comparable>(_ array: [T], item: T) -> Int? {
     var low = 0
-    var high = list.count - 1
+    var high = array.count - 1
     
     while low <= high {
         let mid = (low + high) / 2
         
-        let guess = list[mid]
+        let guess = array[mid]
         
         if guess == item {
             return mid
@@ -30,8 +32,8 @@ func binarySearch<T: Comparable>(_ list: [T], item: T) -> Int? {
     return nil
 }
 
-let myList = [1, 3, 5, 7, 9]
+let myArray = [1, 3, 5, 7, 9]
 
-print(binarySearch(myList, item: 5) ?? "Not found")
-print(binarySearch(myList, item: 2) ?? "Not found")
+print(binarySearch(myArray, item: 5) ?? "Not found") // 2
+print(binarySearch(myArray, item: 2) ?? "Not found") // Not found
 
