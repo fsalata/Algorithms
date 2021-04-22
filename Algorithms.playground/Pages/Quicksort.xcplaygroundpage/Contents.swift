@@ -31,6 +31,3 @@ timeTest {
     result = quickSort(myArray)
 }
 print(result)
-
-// 4.653319001197815 seconds
-// 4.282232999801636 seconds

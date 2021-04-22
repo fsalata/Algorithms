@@ -6,6 +6,8 @@
         <page name='Linear Search'/>
         <page name='Binary Search'/>
         <page name='Quicksort'/>
+        <page name='Insertion Sort'/>
+        <page name='Binary Search Tree'/>
         <page name='Draft Page'/>
     </pages>
 </playground>
