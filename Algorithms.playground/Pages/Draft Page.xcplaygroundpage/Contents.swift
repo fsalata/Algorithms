@@ -68,32 +68,3 @@ print("\(String(repeating: "------------------------------------------", count: 
 
 
 
-func recursiveBinarySearch(array: [Int], item: Int, low: Int, high: Int) -> Int {
-    if array == [] {
-        return -1
-    }
-    
-    let mid = (low + high) / 2
-    
-    let guess = array[mid]
-    
-    if guess == item {
-        return mid
-    }
-    
-    return guess > item ? recursiveBinarySearch(array: array, item: item, low: low, high: mid - 1)
-                 : recursiveBinarySearch(array: array, item: item, low: mid + 1, high: high)
-}
-
-print("recursiveBinarySearch")
-print(recursiveBinarySearch(array: myArray, item: 4, low: 0, high: myArray.count)) // 1
-print(recursiveBinarySearch(array: myArray2, item: 6, low: 0, high: myArray2.count)) // 5
-print(recursiveBinarySearch(array: emptyArray, item: 3, low: 0, high: emptyArray.count)) // -1
-print(recursiveBinarySearch(array: oneItemArray, item: 9, low: 0, high: oneItemArray.count)) // 0
-
-
-
-print("\(String(repeating: "------------------------------------------", count: 3))")
-
-
-

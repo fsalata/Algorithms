@@ -30,5 +30,14 @@ struct Stack<Element> {
     }
 }
 
-let stack = Stack<Int>()
+var stack = Stack<Int>()
+stack.push(0)
+stack.push(9)
+stack.push(18)
+print(stack) // [0, 9, 18]
+
+stack.pop()
+print(stack) // [0, 9]
+
+print(stack.peek() ?? "Not found") // 9
 
